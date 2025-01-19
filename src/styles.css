@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes maskMove {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.mask { animation: maskMove 6s ease-out forwards; }
