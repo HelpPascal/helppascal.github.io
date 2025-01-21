@@ -81,7 +81,7 @@ function updateWaveform() {
   const greenPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
   greenPath.setAttribute('d', pathData);
   //greenPath.setAttribute('stroke', '#5f9ea0');
-  greenPath.setAttribute('stroke', '#3d7e81');
+  greenPath.setAttribute('stroke', '#558c82');
   greenPath.setAttribute('stroke-width', '1.5');
   greenPath.setAttribute('fill', 'none');
   greenPath.setAttribute('mask', 'url(#mask)');
