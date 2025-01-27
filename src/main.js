@@ -1,5 +1,5 @@
 const goal = 75000;
-const raised = 15652.84;
+const raised = 16275.89;
 const duration = 6000;
 const counterElement = document.getElementById('counter');
 let currentAmount = 0;
