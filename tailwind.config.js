@@ -17,6 +17,20 @@ module.exports = {
         darkPurple: '#2A1F2D',
         darkGreen: '#558C82',
       },
+      keyframes: {
+        scrollRight: {
+          'from': { transform: 'translateX(0%)' },
+          'to': { transform: 'translateX(-50%)' },
+        },
+        scrollLeft: {
+          'from': { transform: 'translateX(-50%)' },
+          'to': { transform: 'translateX(0%)' },
+        },
+      },
+      animation: {
+        scrollRight: 'scrollRight 30s linear infinite',
+        scrollLeft: 'scrollLeft 30s linear infinite',
+      },
     },
   },
   plugins: [],

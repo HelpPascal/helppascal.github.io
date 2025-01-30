@@ -1,5 +1,5 @@
 const goal = 75000;
-const raised = 16275.89;
+const raised = 17067.39;
 const duration = 6000;
 const counterElement = document.getElementById('counter');
 let currentAmount = 0;
@@ -7,7 +7,7 @@ let currentAmount = 0;
 const svg = document.getElementById('waveform-svg');
 const maskRect = document.querySelector('#mask rect');
 const waveformGroup = document.getElementById('waveform');
-const spacing = 5, totalPoints = 70, lerpFactor = 0.1;
+const spacing = 5, totalPoints = 50, lerpFactor = 0.1;
 let amplitudes = Array(totalPoints).fill(0);
 let targetAmplitudes = Array(totalPoints).fill(0);
 
@@ -16,6 +16,18 @@ window.addEventListener('load', () => {
   const scaleFactor = svgWidth / parseFloat(svg.getAttribute('viewBox').split(' ')[2]);
   maskRect.setAttribute('width', (svgWidth / (goal / raised)) / scaleFactor);
   animateCounter();
+
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) {
+          navbar.classList.add("bg-white/80", "backdrop-blur", "shadow", "border-b", "border-white/20");
+          navbar.classList.remove("text-white");
+      } else {
+          navbar.classList.remove("bg-white/80", "backdrop-blur", "shadow", "border-b", "border-white/20");
+          navbar.classList.add("text-white");
+      }
+  });
 });
 
 function formatNumber(num) {

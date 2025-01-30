@@ -11,10 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body class="min-h-screen">
-  <nav class="z-10 flex items-center justify-between px-4 py-3 w-full bg-white shadow-sm sticky top-0 z-50">
+  <nav id="navbar" class="fixed top-0 left-0 w-full px-6 py-3 flex items-center justify-between z-50 transition text-white">
     <div class="flex items-center justify-between max-w-4xl mx-auto px-4 w-full">
-      <a href="#" class="text-slate-700 text-sm font-rubik bg-slate-200 px-2 py-1">Help Pascal</a>
-      <div class="hidden sm:flex items-center justify-start gap-4 text-slate-500 text-sm">
+      <div></div>
+      <div class="hidden sm:flex items-center justify-start gap-4 text-sm">
         <a href="#about" class="font-semibold hover:text-slate-900">Over</a>
         <a href="#charity" class="font-semibold hover:text-slate-900">Benefiet</a>
         <a href="#news" class="font-semibold hover:text-slate-900">Nieuws</a>
@@ -23,13 +23,13 @@
   </nav>
 
   <header class="flex items-center justify-center relative w-full bg-black bg-cover bg-center py-8 h-[70vh]" style="background-image: url('./img/header.jpg');">
-    <div class="w-full h-full absolute top-0 left-0 z-0 opacity-90" style="background: linear-gradient(176deg, rgb(255 255 255) 0%, rgb(255 255 255) 100%);"></div>
+    <div class="w-full h-full absolute top-0 left-0 z-0 opacity-90" style="background: linear-gradient(176deg, rgb(66 60 66) 0%, rgb(66 60 66) 100%);"></div>
     <div class="flex flex-col justify-center items-center max-w-4xl w-full">
       <div class="flex flex-col relative text-white max-w-4xl mx-auto p-4 z-10 max-w-full w-[500px]">
         <div class="flex text-base font-mono font-semibold mb-2 text-white rounded">
           <div class="bg-darkBrown text-white rounded px-3 py-1">Raised:</div>
         </div>
-        <div class="text-5xl md:text-7xl font-mono font-semibold flex items-center justify-center pb-2" style="color: #2A1F2D;">
+        <div class="text-5xl md:text-7xl text-white font-mono font-semibold flex items-center justify-center pb-2">
           <span>€</span>
           <span id="counter">0.00</span>
         </div>
@@ -93,7 +93,7 @@
     
   </section>
 
-  <section id="charity" class="bg-lightBeige py-12">
+  <section id="charity" class="py-12" style="background-color: #f4f4f4;">
     <div class="max-w-4xl mx-auto p-4">
       <div class="flex items-center gap-1 mb-4 text-darkGreen text-xs uppercase">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
@@ -137,7 +137,7 @@
     </div>
   </section>
 
-  <section id="news" class="bg-slate-100 py-12">
+  <section id="news" class="bg-white py-12">
     <div class="max-w-4xl mx-auto p-4">
       <div class="flex items-center gap-1 mb-4 text-darkGreen text-xs uppercase">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
@@ -230,17 +230,115 @@
     </div>
   </section>
 
-  <!-- <section class="bg-white py-12">
-    <div class="max-w-4xl mx-auto p-4">
-      <h2 class="text-5xl text-darkBrown font-rubik mb-4">Sponsors</h2>
-      
-      <div>Sponsor 1</div>
-      <div>Sponsor 2</div>
-      <div>Sponsor 3</div>
+  <section id="sponsors" class="bg-white py-12 bg-center bg-repeat" style="background-image: url('./img/dot-grid.webp');">
+    <div class="mb-8">
+      <div class="w-full overflow-hidden py-1 flex">
+        <div class="flex min-w-[100%] animate-scrollRight text-4xl">
+          <div class="flex flex-nowrap min-w-full whitespace-nowrap">
+            <span class="text-slate-500">Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span> sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span> sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span> sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span> sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">.</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="w-full overflow-hidden py-1 flex">
+        <div class="flex min-w-[100%] animate-scrollLeft text-4xl">
+          <div class="flex flex-nowrap min-w-full whitespace-nowrap">
+            <span class="text-slate-500">Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span> sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span> sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span> sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span> sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">. Met dank aan onze&nbsp;</span>
+            <span>sponsors</span>
+            <span class="text-slate-500">.</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </section> -->
 
-  <footer class="bg-slate-800 text-slate-100 py-4">
+    <div class="max-w-4xl mx-auto p-4">
+      <!-- <div class="flex items-center justify-between">
+        <h2 class="text-4xl text-darkBrown font-rubik mb-8">Sponsors</h2>
+      </div> -->
+      <div class="grid grid-flow-row-dense grid-cols-4 sm:grid-cols-4 gap-4 flex">
+        
+        <div class="col-span-3 flex items-center justify-center rounded h-40 border bg-white">
+          <img src="./img/sponsors/agristo.gif" alt="Sponsor" class="h-full w-auto object-contain p-4">
+        </div>
+
+        <div class="col-span-1 flex items-center justify-center rounded h-40 border bg-white">
+          <img src="./img/sponsors/huis-maria.jpeg" alt="Sponsor" class="h-full w-auto object-contain p-4">
+        </div>
+
+        <div class="col-span-1 flex items-center justify-center rounded h-40 border bg-white">
+          <img src="./img/sponsors/lago.jpeg" alt="Sponsor" class="h-full w-auto object-contain p-4">
+        </div>
+
+        <div class="col-span-3 flex items-center justify-center rounded h-40 border bg-black">
+          <img src="./img/sponsors/dumon.jpeg" alt="Sponsor" class="h-full w-auto object-contain p-4">
+        </div>
+
+        <div class="col-span-2 flex items-center justify-center rounded h-40 border bg-white">
+          <img src="./img/sponsors/apotheek-arie.png" alt="Sponsor" class="h-full w-auto object-contain p-10">
+        </div>
+
+        <div class="col-span-1 flex items-center justify-center rounded h-40 border bg-white">
+          <img src="./img/sponsors/bonap.png" alt="Sponsor" class="h-full w-auto object-contain p-8">
+        </div>
+
+       
+      </div>
+
+      
+    </div>
+  </section>
+
+  <footer class="text-slate-700 py-4 mt-16 border-t" style="background-color: #fff;">
     <div class="max-w-4xl mx-auto p-2">
       <p class="text-center">© 2025 Help Pascal</p>
       <p class="text-center text-xs">Made by <a href="https://joachimdefour.com" target="_blank" class="text-darkGreen">Joachim Defour</a></p>
