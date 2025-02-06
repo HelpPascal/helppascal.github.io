@@ -8,14 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-BDI3rzBe.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Cr-MZrnt.css">
+  <script type="module" crossorigin src="/assets/index-lRvp-SKu.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CJCogpMn.css">
 </head>
 <body class="min-h-screen">
-  <nav id="navbar" class="fixed top-0 left-0 w-full px-6 py-3 flex items-center justify-between z-50 transition text-white">
+  <nav id="navbar" class="fixed top-0 left-0 w-full flex items-center justify-between z-50 transition text-white">
     <div class="flex items-center justify-between max-w-4xl mx-auto px-4 w-full">
-      <div></div>
-      <div class="hidden sm:flex items-center justify-start gap-4 text-sm">
+      <div class="mr-4 py-1">
+        <img id="logo" src="/assets/microphone-DFp950TN.svg" alt="microphone" class="hidden w-5 h-5 object-cover object-top rounded-lg z-10">
+      </div>
+      <div class="flex items-center justify-start gap-4 text-sm py-3">
         <a href="#about" class="font-semibold hover:text-slate-900">Over</a>
         <a href="#charity" class="font-semibold hover:text-slate-900">Benefiet</a>
         <a href="#news" class="font-semibold hover:text-slate-900">Nieuws</a>
@@ -39,14 +41,39 @@
         </div>
       </div>
       <div class="relative w-full h-32 z-10">
-        <div class="absolute inset-0 max-w-4xl mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" id="waveform-svg" class="w-full h-fit" viewBox="0 0 350 50" fill="none" stroke="#d0bca3" stroke-width="1.5">
+        <div class="absolute h-fit inset-0 max-w-4xl mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" id="waveform-svg" class="w-full h-fit" viewBox="0 0 250 50" fill="none" stroke="#d0bca3" stroke-width="1.5">
             <defs>
-              <mask id="mask" x="0" y="0" width="100%" height="50">
-                <rect x="0" y="0" width="100%" height="50" fill="white" class="mask" />
+              <mask 
+                id="mask" 
+                x="0" 
+                y="0" 
+                width="102%" 
+                height="102%"
+              >
+                <rect
+                  x="-1%" 
+                  y="-1%" 
+                  width="0%" 
+                  height="102%" 
+                  fill="white" 
+                  class="mask" 
+                />
               </mask>
             </defs>
-            <g id="waveform"></g>
+            <g id="waveform">
+              <path 
+                id="wf-path1" d=""
+              ></path>
+              <path 
+                id="wf-path2" 
+                d=""
+                mask="url(#mask)"
+                stroke="#558c82"
+                stroke-width="1.5"
+                fill="none"
+              ></path>
+            </g>
           </svg>
         </div>
       </div>
@@ -54,12 +81,8 @@
   </header>
 
   <section id="about" class="max-w-4xl mx-auto p-4 bg-white py-28">
-    <div class="flex gap-16">
-      <div class="relative hidden sm:block w-1/3 min-w-[200px] h-auto">
-        <img src="/assets/about-DRWRbIxX.jpg" alt="About" class="relative w-full aspect-[3/4] border-4 border-white object-cover object-top rounded-lg z-10">
-        <img src="/assets/about-DRWRbIxX.jpg" alt="About" class="absolute blur-sm opacity-50 top-3 -left-3 w-full aspect-[3/4] border-4 border-white object-cover object-top rounded-lg">
-      </div>
-      <div class="w-full sm:w-2/3">
+    <div class="flex items-center justify-between">
+      <div class="w-full sm:w-2/3 lg:w-1/2">
         <div class="flex items-center gap-1 mb-4 text-darkGreen text-xs uppercase">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
             <path d="m9.653 16.915-.005-.003-.019-.01a20.759 20.759 0 0 1-1.162-.682 22.045 22.045 0 0 1-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 0 1 8-2.828A4.5 4.5 0 0 1 18 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 0 1-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 0 1-.69.001l-.002-.001Z" />
@@ -67,48 +90,146 @@
           <p class="font-rubik font-bold">Over deze site </p>
         </div>
 
-        <h2 class="text-5xl text-darkBrown font-rubik mb-8">Geef Pascal zijn <span class="font-semibold">stem</span> terug</h2>
+        <h2 class="text-6xl text-darkBrown font-rubik mb-8">Geef Pascal zijn <span class="font-semibold">stem</span> terug</h2>
+      </div>
+      <div class="w-1/3 lg:w-1/2 flex justify-end">
+        <div class="relative w-fit">
+          <img src="/assets/microphone-DFp950TN.svg" alt="microphone" class="w-28 h-28 object-cover object-top rounded-lg z-10">
 
-        <img src="/assets/about-DRWRbIxX.jpg" alt="About" class="relative block sm:hidden w-full aspect-[3/4] border-4 border-white object-cover object-top rounded-lg z-10 mb-4">
+          <svg 
+            class="absolute w-6 h-6 text-beige top-0 left-0 animate-subtleMove"
+            style="animation-delay: 0s;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="currentColor"
+          >
+            <path d="M12 2c.6 0 1 .4 1.2 1l1 4c.6 2 2.2 3.6 4.2 4.2l4 1c.6.2 1 .6 1 1.2s-.4 1-1 1.2l-4 1c-2 0.6-3.6 2.2-4.2 4.2l-1 4c-.2.6-.6 1-1.2 1s-1-.4-1.2-1l-1-4c-.6-2-2.2-3.6-4.2-4.2l-4-1c-.6-.2-1-.6-1-1.2s.4-1 1-1.2l4-1c2-.6 3.6-2.2 4.2-4.2l1-4c.2-.6.6-1 1.2-1z"/>
+          </svg>
 
-        <p class="mb-4 text-slate-900 italic">Pascal, een man die op 8 mei 2022 een ernstig herseninfarct kreeg, kampt sindsdien met blijvende gevolgen. Hij is halfzijdig verlamd en lijdt aan afasie, waardoor hij niet meer kan spreken of schrijven. </p>
-        <p class="mb-2 text-slate-700">Ondanks intensieve therapieën is zijn herstel tot nu toe beperkt. Er is echter nog hoop dankzij gespecialiseerde behandelingen zoals robottherapie, magnetische hersenstimulatie en mogelijk een stamceltransplantatie. Helaas worden de kosten voor deze behandelingen, die kunnen oplopen tot €75.000, niet vergoed door het ziekenfonds. Om de kosten voor de therapieën betaalbaar te maken en zo het herstel van Pascal te ondersteunen, organiseren wij verschillende acties om geld in te zamelen.</p>
-        <p class="mb-2 text-slate-700">Deze website fungeert als het centrale punt voor al onze inzamelacties. Hier kunt u volgen hoeveel er al is ingezameld en kunt u updates vinden over het gebruik van de gedoneerde middelen. Op dit moment kunt u bijdragen via de steunactie <strong>'Geef Pascal zijn stem terug'</strong> of door lekkers aan te schaffen via Trooper. Ook staat er een grotere actie op de planning: de benefiet <strong>'De tafel van Pascal'</strong>.</p>
+          <svg 
+            class="absolute w-5 h-5 text-darkGreen top-0 right-0 animate-subtleMove"
+            style="animation-delay: 1s;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="currentColor"
+          >
+            <path d="M12 2c.6 0 1 .4 1.2 1l1 4c.6 2 2.2 3.6 4.2 4.2l4 1c.6.2 1 .6 1 1.2s-.4 1-1 1.2l-4 1c-2 0.6-3.6 2.2-4.2 4.2l-1 4c-.2.6-.6 1-1.2 1s-1-.4-1.2-1l-1-4c-.6-2-2.2-3.6-4.2-4.2l-4-1c-.6-.2-1-.6-1-1.2s.4-1 1-1.2l4-1c2-.6 3.6-2.2 4.2-4.2l1-4c.2-.6.6-1 1.2-1z"/>
+          </svg>
 
-        <div class="flex items-center justify-center mt-8 gap-2">
-          <a 
-            class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" 
-            href="https://steunactie.be/actie/geef-pascal-zijn-stem-terug/-45079"
-            target="_blank"
-          >Steun via Steunactie.be</a>
-          <a 
-            class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" 
-            href="https://www.trooper.be/helpscalle"
-            target="_blank"
-          >Steun via Trooper</a>
+          <svg 
+            class="absolute w-4 h-4 text-darkGreen top-6 left-2 animate-subtleMove"
+            style="animation-delay: 0.7s;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="currentColor"
+          >
+            <path d="M12 2c.6 0 1 .4 1.2 1l1 4c.6 2 2.2 3.6 4.2 4.2l4 1c.6.2 1 .6 1 1.2s-.4 1-1 1.2l-4 1c-2 0.6-3.6 2.2-4.2 4.2l-1 4c-.2.6-.6 1-1.2 1s-1-.4-1.2-1l-1-4c-.6-2-2.2-3.6-4.2-4.2l-4-1c-.6-.2-1-.6-1-1.2s.4-1 1-1.2l4-1c2-.6 3.6-2.2 4.2-4.2l1-4c.2-.6.6-1 1.2-1z"/>
+          </svg>
+
+          <!--<svg 
+            class="absolute w-6 h-6 text-yellow-700 top-20 left-10 animate-subtleMove"
+            style="animation-delay: 1s;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="currentColor"
+          >
+            <rect x="11" y="2" width="2" height="8" rx="1"/>
+            <rect x="11" y="14" width="2" height="8" rx="1"/>
+            <rect x="2" y="11" width="8" height="2" rx="1"/>
+            <rect x="14" y="11" width="8" height="2" rx="1"/>
+          </svg>-->
         </div>
       </div>
     </div>
-   
 
-    
+    <div class="flex gap-8 md:gap-16 mt-16">
+      <div class="relative hidden sm:block w-1/3 min-w-[280px] h-auto">
+        <img src="/assets/about-DRWRbIxX.jpg" alt="About" class="relative w-full sm:aspect-[1/1] object-cover object-top rounded-xl z-10 shadow-xl">
+      </div>
+
+      <div class="w-full sm:w-2/3">
+        <p class="mb-4 text-slate-900 italic">Pascal, een man die op 8 mei 2022 een ernstig herseninfarct kreeg, kampt sindsdien met blijvende gevolgen. Hij is halfzijdig verlamd en lijdt aan afasie, waardoor hij niet meer kan spreken of schrijven. </p>
+
+
+        <p class="mb-2 text-slate-700">Ondanks intensieve therapieën is zijn herstel tot nu toe beperkt. Er is echter nog hoop dankzij gespecialiseerde behandelingen zoals robottherapie, magnetische hersenstimulatie en mogelijk een stamceltransplantatie. Helaas worden de kosten voor deze behandelingen, die kunnen oplopen tot €75.000, niet vergoed door het ziekenfonds. Om de kosten voor de therapieën betaalbaar te maken en zo het herstel van Pascal te ondersteunen, organiseren wij verschillende acties om geld in te zamelen.</p>
+        
+
+        <img src="/assets/about-DRWRbIxX.jpg" alt="About" class="relative block sm:hidden w-full max-w-[480px] aspect-[1/1] border-4 border-white object-cover object-top rounded-lg z-10 mt-4 mx-auto">
+      </div>
+    </div>
+
+    <div class="mt-4 sm:mt-8">
+      <p class="mb-2 text-slate-700">Deze website fungeert als het centrale punt voor al onze inzamelacties. Hier kunt u volgen hoeveel er al is ingezameld en kunt u updates vinden over het gebruik van de gedoneerde middelen. Op dit moment kunt u bijdragen via de steunactie <strong>'Geef Pascal zijn stem terug'</strong> of door lekkers aan te schaffen via Trooper. Ook staat er een grotere actie op de planning: de benefiet <strong>'De tafel van Pascal'</strong>.</p>
+    </div>
+
+    <div class="flex items-center justify-center mt-16 gap-2">
+      <a 
+        class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" 
+        href="https://steunactie.be/actie/geef-pascal-zijn-stem-terug/-45079"
+        target="_blank"
+      >Steun via Steunactie.be</a>
+      <a 
+        class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" 
+        href="https://www.trooper.be/helpscalle"
+        target="_blank"
+      >Steun via Trooper</a>
+    </div>
   </section>
 
   <section id="charity" class="py-12" style="background-color: #f4f4f4;">
-    <div class="max-w-4xl mx-auto p-4">
-      <div class="flex items-center gap-1 mb-4 text-darkGreen text-xs uppercase">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
-          <path d="M7 4a3 3 0 0 1 6 0v6a3 3 0 1 1-6 0V4Z" />
-          <path d="M5.5 9.643a.75.75 0 0 0-1.5 0V10c0 3.06 2.29 5.585 5.25 5.954V17.5h-1.5a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-1.5v-1.546A6.001 6.001 0 0 0 16 10v-.357a.75.75 0 0 0-1.5 0V10a4.5 4.5 0 0 1-9 0v-.357Z" />
-        </svg>
-        <p class="font-rubik font-bold">Benefiet</p>
+
+    <div class="flex items-center justify-between max-w-4xl mx-auto p-4">
+      <div class="w-full sm:w-2/3 lg:w-1/2">
+        <div class="flex items-center gap-1 mb-4 text-darkGreen text-xs uppercase">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+            <path d="M7 4a3 3 0 0 1 6 0v6a3 3 0 1 1-6 0V4Z" />
+            <path d="M5.5 9.643a.75.75 0 0 0-1.5 0V10c0 3.06 2.29 5.585 5.25 5.954V17.5h-1.5a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-1.5v-1.546A6.001 6.001 0 0 0 16 10v-.357a.75.75 0 0 0-1.5 0V10a4.5 4.5 0 0 1-9 0v-.357Z" />
+          </svg>
+          <p class="font-rubik font-bold">Benefiet</p>
+        </div>
+        <h2 class="text-5xl text-darkBrown font-rubik mb-8">De <span class="font-semibold">Tafel</span> van Pascal</h2>
       </div>
-      <h2 class="text-5xl text-darkBrown font-rubik mb-8">De Tafel van Pascal</h2>
+      <div class="w-1/3 min-w-32 lg:w-1/2 flex justify-end">
+        <div class="relative w-fit">
+          <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20fill='%23000000'%20height='800px'%20width='800px'%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20512%20512'%20xml:space='preserve'%3e%3cg%3e%3cg%3e%3cg%3e%3cpath%20d='M341.333,255.998H170.667c-14.114,0-25.6,11.486-25.6,25.6s11.486,25.6,25.6,25.6h51.2c4.719,0,8.533-3.823,8.533-8.533%20c0-4.71-3.814-8.533-8.533-8.533h-51.2c-4.71,0-8.533-3.831-8.533-8.533s3.823-8.533,8.533-8.533h170.667%20c4.71,0,8.533,3.831,8.533,8.533s-3.823,8.533-8.533,8.533H256c-4.719,0-8.533,3.823-8.533,8.533v150.067l-48.7,48.7%20c-3.337,3.337-3.337,8.73,0,12.066c1.664,1.664,3.849,2.5,6.033,2.5c2.185,0,4.369-0.836,6.033-2.5l51.2-51.2%20c1.596-1.596,2.5-3.772,2.5-6.033V307.198h76.8c14.114,0,25.6-11.486,25.6-25.6S355.448,255.998,341.333,255.998z'/%3e%3cpath%20d='M230.4,136.532c-2.688,0-5.214,1.263-6.827,3.413c-28.442,37.914-1.946,91.989-0.802,94.268%20c2.099,4.215,7.262,5.914,11.426,3.814c4.215-2.099,5.939-7.219,3.84-11.435c-0.222-0.452-21.214-43.511-3.132-72.994h42.189%20c18.082,29.483-2.91,72.542-3.14,72.994c-2.091,4.215-0.375,9.335,3.849,11.435c1.22,0.614,2.517,0.896,3.797,0.896%20c3.123,0,6.144-1.724,7.629-4.71c1.143-2.278,27.639-56.354-0.802-94.268c-1.613-2.15-4.147-3.413-6.827-3.413h-17.067V76.798%20h8.533c14.114,0,25.6-11.486,25.6-25.6v-25.6c0-2.628-1.212-5.111-3.285-6.724c-2.074-1.621-4.787-2.202-7.313-1.553%20l-23.535,5.879v-6.135c0-3.917-2.671-7.33-6.468-8.277l-34.133-8.533c-2.543-0.631-5.24-0.068-7.313,1.553%20c-2.074,1.613-3.285,4.096-3.285,6.724v42.667c0,14.114,11.486,25.6,25.6,25.6h8.533v22.067l-2.5-2.5%20c-3.337-3.336-8.73-3.336-12.066,0c-3.337,3.337-3.337,8.73,0,12.066l14.566,14.566v13.534H230.4z%20M264.533,40.796L281.6,36.53%20v14.669c0,4.702-3.823,8.533-8.533,8.533h-8.533V40.796z%20M238.933,59.732c-4.71,0-8.533-3.831-8.533-8.533V19.463l17.067,4.267%20v36.002H238.933z'/%3e%3cpath%20d='M503.467,204.739c-70.588,0-128,57.421-128,128c0,2.27,0.905,4.446,2.509,6.05c2.142,2.133,2.551,2.534,22.682,2.534%20c4.676,0,10.428-0.026,17.51-0.051c4.71-0.017,8.516-3.857,8.499-8.567c-0.017-4.702-3.831-8.499-8.533-8.499h-0.034%20c-7.484,0.034-17.954,0.06-25.25,0.06c4.13-54.409,47.684-97.971,102.084-102.136v76.365c0,14.182-11.486,25.711-25.6,25.711%20h-17.067c-4.719,0-8.533,3.823-8.533,8.533v162.193h-25.6c-4.719,0-8.533,3.823-8.533,8.533s3.814,8.533,8.533,8.533H486.4%20c4.719,0,8.533-3.823,8.533-8.533s-3.814-8.533-8.533-8.533h-25.6v-153.66h8.533c23.526,0,42.667-19.183,42.667-42.778v-85.222%20C512,208.562,508.186,204.739,503.467,204.739z'/%3e%3cpath%20d='M8.533,204.739c-4.719,0-8.533,3.823-8.533,8.533v85.222c0,23.595,19.14,42.778,42.667,42.778H51.2v153.66H25.6%20c-4.719,0-8.533,3.823-8.533,8.533s3.814,8.533,8.533,8.533h68.267c4.719,0,8.533-3.823,8.533-8.533s-3.814-8.533-8.533-8.533%20h-25.6V332.739c0-4.71-3.814-8.533-8.533-8.533H42.667c-14.114,0-25.6-11.529-25.6-25.711V222.13%20c54.4,4.164,97.946,47.727,102.084,102.136c-7.296,0-17.775-0.026-25.25-0.06h-0.034c-4.702,0-8.516,3.797-8.533,8.499%20c-0.017,4.71,3.789,8.55,8.499,8.567c7.083,0.026,12.834,0.051,17.51,0.051c20.13,0,20.54-0.401,22.682-2.534%20c1.604-1.604,2.509-3.78,2.509-6.05C136.533,262.16,79.113,204.739,8.533,204.739z'/%3e%3cpath%20d='M287.633,471.832c-3.337-3.336-8.73-3.336-12.066,0c-3.337,3.337-3.337,8.73,0,12.066l25.6,25.6%20c1.664,1.664,3.849,2.5,6.033,2.5c2.185,0,4.369-0.836,6.033-2.5c3.337-3.337,3.337-8.73,0-12.066L287.633,471.832z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt="microphone" class="w-24 h-24 object-cover object-top rounded-lg z-10">
+
+          <svg 
+            class="absolute w-6 h-6 text-beige top-0 left-0 animate-subtleMove"
+            style="animation-delay: 0s;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="currentColor"
+          >
+            <path d="M12 2c.6 0 1 .4 1.2 1l1 4c.6 2 2.2 3.6 4.2 4.2l4 1c.6.2 1 .6 1 1.2s-.4 1-1 1.2l-4 1c-2 0.6-3.6 2.2-4.2 4.2l-1 4c-.2.6-.6 1-1.2 1s-1-.4-1.2-1l-1-4c-.6-2-2.2-3.6-4.2-4.2l-4-1c-.6-.2-1-.6-1-1.2s.4-1 1-1.2l4-1c2-.6 3.6-2.2 4.2-4.2l1-4c.2-.6.6-1 1.2-1z"/>
+          </svg>
+
+          <svg 
+            class="absolute w-5 h-5 text-darkGreen top-0 right-0 animate-subtleMove"
+            style="animation-delay: 1s;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="currentColor"
+          >
+            <path d="M12 2c.6 0 1 .4 1.2 1l1 4c.6 2 2.2 3.6 4.2 4.2l4 1c.6.2 1 .6 1 1.2s-.4 1-1 1.2l-4 1c-2 0.6-3.6 2.2-4.2 4.2l-1 4c-.2.6-.6 1-1.2 1s-1-.4-1.2-1l-1-4c-.6-2-2.2-3.6-4.2-4.2l-4-1c-.6-.2-1-.6-1-1.2s.4-1 1-1.2l4-1c2-.6 3.6-2.2 4.2-4.2l1-4c.2-.6.6-1 1.2-1z"/>
+          </svg>
+
+          <svg 
+            class="absolute w-4 h-4 text-darkGreen top-6 left-2 animate-subtleMove"
+            style="animation-delay: 0.7s;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="currentColor"
+          >
+            <path d="M12 2c.6 0 1 .4 1.2 1l1 4c.6 2 2.2 3.6 4.2 4.2l4 1c.6.2 1 .6 1 1.2s-.4 1-1 1.2l-4 1c-2 0.6-3.6 2.2-4.2 4.2l-1 4c-.2.6-.6 1-1.2 1s-1-.4-1.2-1l-1-4c-.6-2-2.2-3.6-4.2-4.2l-4-1c-.6-.2-1-.6-1-1.2s.4-1 1-1.2l4-1c2-.6 3.6-2.2 4.2-4.2l1-4c.2-.6.6-1 1.2-1z"/>
+          </svg>
+
+          <!--<svg 
+            class="absolute w-6 h-6 text-yellow-700 top-20 left-10 animate-subtleMove"
+            style="animation-delay: 1s;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="currentColor"
+          >
+            <rect x="11" y="2" width="2" height="8" rx="1"/>
+            <rect x="11" y="14" width="2" height="8" rx="1"/>
+            <rect x="2" y="11" width="8" height="2" rx="1"/>
+            <rect x="14" y="11" width="8" height="2" rx="1"/>
+          </svg>-->
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto p-4">
+      
       <div class="flex items-center justify-between gap-16">
         <div class="w-full md:w-2/3">
           <p class="mb-4 text-slate-900 italic">Op 29 maart 2025 organiseren wij de benefiet <strong>De Tafel van Pascal</strong> in Spes Nostra Heule, ten voordele van Pascal. Na een zwaar herseninfarct heeft Pascal intensieve therapieën nodig om zijn leven weer op de rails te krijgen. Met deze benefiet willen we hem steunen en bijdragen aan zijn herstel.</p>
 
-          <div class="block sm:hidden w-full object-cover object-top rounded-xl z-10 bg-darkBrown shadow-md mb-4">
+          <div class="block sm:hidden w-full max-w-[480px] object-cover object-top rounded-xl z-10 shadow-md mb-4 mx-auto">
             <img src="/assets/affiche-DxtEPG6p.png" alt="Affiche" class="w-full h-auto object-cover object-top rounded-xl z-10">
           </div>
 
@@ -116,9 +237,9 @@
           <p class="mb-2 text-slate-700">We voorzien ook leuke <b>randanimatie voor de kinderen <i>(enkel tussen 17:00 - 20:00)</i></b>: een springkasteel, schminken en een dansplekje. Uiteraard ben je ook van harte welkom om gewoon langs te komen, iets te drinken en deel te nemen aan onze <b>tombola</b>! Er zijn tal van prijzen te winnen, waaronder een pak gratis frietjes, een bon voor een van onze deelnemende slagerijen, of zelfs gesigneerde boeken!</p>
           <p class="mb-2 text-slate-700">We hopen je te mogen verwelkomen voor een gezellige en smakelijke avond, terwijl we samen Pascal een duwtje in de rug geven!</p>
         </div>
-        <div class="hidden sm:block md:w-1/3">
-          <div class="w-full object-cover object-top rounded-xl z-10 bg-darkBrown shadow-md">
-            <img src="/assets/affiche-DxtEPG6p.png" alt="Affiche" class="w-full h-auto object-cover object-top rounded-xl z-10">
+        <div class="hidden sm:block md:w-1/3 max-w-[280px]">
+          <div class="w-full object-cover object-top rounded-xl z-10">
+            <img src="/assets/affiche-DxtEPG6p.png" alt="Affiche" class="w-full h-auto object-cover object-top rounded-xl z-10 transition rotate-3 hover:rotate-1 hover:scale-105 shadow-md">
           </div>
         </div>
       </div>
@@ -151,62 +272,87 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
-        <div class="flex flex-col w-full bg-white rounded-md p-4 shadow">
-          <img src="/assets/news1-CvAOt4as.jpg" alt="News 1" class="w-full h-48 object-cover object-top rounded mb-4">
-          <p class="font-bold text-xs text-darkBrown mb-2">21/01/2025</p>
-          <p class="text-sm font-slate-700 mb-2">Dankzij jullie steun – zichtbaar én onzichtbaar – hebben we al €15.000 ingezameld! 💙
-            Of je nu je naam deelt of anoniem blijft, elke bijdrage brengt ons dichter bij ons doel om Pascal zijn stem terug te geven. Elk woord dat niet uitgesproken wordt, is voor ons een reden om harder te vechten. Jullie hulp geeft ons hoop en kracht om door te blijven gaan.</p>
-          <div class="flex items-center justify-end mt-auto">
-            <a 
-              class="bg-lightBeige text-darkBrown rounded-full text-xs font-semibold px-3 py-1"
-              href="https://www.facebook.com/helppascal"
-              target="_blank"
-            >
-              <span class="mr-1">Lees meer</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block">
-                <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
+        <div class="flex flex-col w-full bg-white rounded-xl shadow overflow-hidden">
+          <img src="/assets/news1-CvAOt4as.jpg" alt="News 1" class="w-full h-48 min-h-48 object-cover object-top rounded-t-xl">
+          <div class="p-4 h-full flex flex-col" style="background: radial-gradient(circle, hsl(274.29deg 5.04% 27.25% / 7%) 0%, hsla(0, 0%, 100%, 1) 89%)">
+            <div class="flex items-center text-base mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-slate-700">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
               </svg>
-            </a>
+              
+              <p class="font-bold text-darkBrown ml-1">21/01/2025</p>
+            </div>
+            <p class="text-sm text-slate-800 mb-2">Dankzij jullie steun – zichtbaar én onzichtbaar – hebben we al €15.000 ingezameld! 💙
+              Of je nu je naam deelt of anoniem blijft, elke bijdrage brengt ons dichter bij ons doel om Pascal zijn stem terug te geven. Elk woord dat niet uitgesproken wordt, is voor ons een reden om harder te vechten. Jullie hulp geeft ons hoop en kracht om door te blijven gaan.</p>
+            <div class="flex items-center justify-end mt-auto px-4 pt-2">
+              <a 
+                class="bg-lightBeige text-darkBrown rounded-full text-xs font-semibold py-2 px-4 transition hover:scale-x-105"
+                href="https://www.facebook.com/helppascal"
+                target="_blank"
+              >
+                <span class="mr-1">Lees meer</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block">
+                  <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="flex flex-col w-full bg-white rounded-md p-4 shadow">
-          <img src="/assets/news2-epvAj337.jpg" alt="News 2" class="w-full h-48 object-cover object-top rounded mb-4">
-          <p class="font-bold text-xs text-darkBrown mb-2">17/01/2025</p>
-          <p class="text-sm font-slate-700 mb-2">Bezoek aan TRAINM – Een positieve stap vooruit
-            Het bezoek aan TRAINM was een lange en vermoeiende dag, maar het resultaat was meer dan de moeite waard! Tijdens de intake bij de neuroloog werden verschillende vragen gesteld, het dossier grondig doorgenomen, en uiteindelijk kreeg Pascal opnieuw groen licht om verder te gaan met het traject.</p>
-          <div class="flex items-center justify-end mt-auto">
-            <a 
-              class="bg-lightBeige text-darkBrown rounded-full text-xs font-semibold px-3 py-1"
-              href="https://www.facebook.com/helppascal"
-              target="_blank"
-            >
-              <span class="mr-1">Lees meer</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block">
-                <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
+        <div class="flex flex-col w-full bg-white rounded-xl shadow overflow-hidden">
+          <img src="/assets/news2-epvAj337.jpg" alt="News 2" class="w-full h-48 min-h-48 object-cover object-top rounded-t-xl">
+          <div class="p-4 h-full flex flex-col" style="background: radial-gradient(circle, hsl(274.29deg 5.04% 27.25% / 7%) 0%, hsla(0, 0%, 100%, 1) 89%)">
+            <div class="flex items-center text-base mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-slate-700">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
               </svg>
-            </a>
+              
+              <p class="font-bold text-darkBrown ml-1">17/01/2025</p>
+            </div>
+            <p class="text-sm text-slate-800 mb-2">Bezoek aan TRAINM – Een positieve stap vooruit
+              Het bezoek aan TRAINM was een lange en vermoeiende dag, maar het resultaat was meer dan de moeite waard! Tijdens de intake bij de neuroloog werden verschillende vragen gesteld, het dossier grondig doorgenomen, en uiteindelijk kreeg Pascal opnieuw groen licht om verder te gaan met het traject.</p>
+            <div class="flex items-center justify-end mt-auto px-4 pt-2">
+              <a 
+                class="bg-lightBeige text-darkBrown rounded-full text-xs font-semibold py-2 px-4 transition hover:scale-x-105"
+                href="https://www.facebook.com/helppascal"
+                target="_blank"
+              >
+                <span class="mr-1">Lees meer</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block">
+                  <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="flex flex-col w-full bg-white rounded-md p-4 shadow">
-          <img src="/assets/news3-CZvHyaOe.jpg" alt="News 3" class="w-full h-48 object-cover object-top rounded mb-4">
-          <p class="font-bold text-xs text-darkBrown mb-2">11/01/2025</p>
-          <p class="text-sm font-slate-700 mb-2">💬 Een kans op een stem, een kans op een toekomst.
-            Mijn papa Pascal kreeg op 50-jarige leeftijd een zwaar herseninfarct. Sindsdien kan hij niet meer praten. Ondanks alle therapieën blijft zijn spraak uit. Er is nog hoop met een nieuw behandeltraject, maar de kosten zijn enorm en worden niet vergoed.</p>
-          <div class="flex items-center justify-end mt-auto">
-            <a 
-              class="bg-lightBeige text-darkBrown rounded-full text-xs font-semibold px-3 py-1"
-              href="https://www.facebook.com/helppascal"
-              target="_blank"
-            >
-              <span class="mr-1">Lees meer</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block">
-                <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
+        <div class="flex flex-col w-full bg-white rounded-xl shadow overflow-hidden">
+          <img src="/assets/news3-CZvHyaOe.jpg" alt="News 3" class="w-full h-48 min-h-48 object-cover object-top rounded-t-xl">
+          <div class="p-4 h-full flex flex-col" style="background: radial-gradient(circle, hsl(274.29deg 5.04% 27.25% / 7%) 0%, hsla(0, 0%, 100%, 1) 89%)">
+            <div class="flex items-center text-base mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-slate-700">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
               </svg>
-            </a>
+              
+              <p class="font-bold text-darkBrown ml-1">11/01/2025</p>
+            </div>
+            <p class="text-sm text-slate-800 mb-2">💬 Een kans op een stem, een kans op een toekomst.
+              Mijn papa Pascal kreeg op 50-jarige leeftijd een zwaar herseninfarct. Sindsdien kan hij niet meer praten. Ondanks alle therapieën blijft zijn spraak uit. Er is nog hoop met een nieuw behandeltraject, maar de kosten zijn enorm en worden niet vergoed.</p>
+            <div class="flex items-center justify-end mt-auto px-4 pt-2">
+              <a 
+                class="bg-lightBeige text-darkBrown rounded-full text-xs font-semibold py-2 px-4 transition hover:scale-x-105"
+                href="https://www.facebook.com/helppascal"
+                target="_blank"
+              >
+                <span class="mr-1">Lees meer</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block">
+                  <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
+
       </div>
 
       <div class="flex items-center justify-center text-sm text-slate-500 italic mt-8">
@@ -214,14 +360,14 @@
       </div>
       <div class="flex items-center justify-center gap-2 w-full mt-2">
         <a 
-          class="bg-slate-200 text-white rounded-full px-2 py-1"
+          class="bg-white text-white rounded-full px-2 py-1"
           href="https://www.facebook.com/helppascal"
           target="_blank"
         >
           <img src="data:image/png;base64,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" alt="facebook" class="w-8 h-8">
         </a>
         <a 
-          class="bg-slate-200 text-white rounded-full px-2 py-1"
+          class="bg-white text-white rounded-full px-2 py-1"
           href="https://www.instagram.com/helppascal"
           target="_blank"
         >
@@ -231,9 +377,9 @@
     </div>
   </section>
 
-  <section id="sponsors" class="bg-white py-12 bg-center bg-repeat" style="background-image: url('data:image/webp;base64,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');">
+  <section id="sponsors" class="bg-white pt-12 pb-16 bg-center bg-repeat" style="background: radial-gradient(circle, hsla(165, 19%, 88%, 1) 0%, hsla(0, 0%, 100%, 1) 49%);">
     <div class="mb-8">
-      <div class="w-full overflow-hidden py-1 flex">
+      <div class="w-full overflow-hidden flex">
         <div class="flex min-w-[100%] animate-scrollRight text-2xl sm:text-3xl">
           <div class="flex flex-nowrap min-w-full whitespace-nowrap">
             <span class="text-slate-500">Met dank aan onze&nbsp;</span>
@@ -267,7 +413,7 @@
         </div>
       </div>
   
-      <div class="w-full overflow-hidden py-1 flex">
+      <div class="w-full overflow-hidden flex">
         <div class="flex min-w-[100%] animate-scrollLeft text-2xl sm:text-3xl">
           <div class="flex flex-nowrap min-w-full whitespace-nowrap">
             <span class="text-slate-500">Met dank aan onze&nbsp;</span>
@@ -308,42 +454,42 @@
       </div> -->
       <div class="grid grid-flow-row-dense grid-cols-4 gap-4 flex">
         
-        <div class="col-span-4 sm:col-span-3 flex items-center justify-center h-40 bg-white relative">
+        <div class="col-span-4 sm:col-span-3 flex items-center justify-center h-40 relative">
           <div class="absolute border border-dashed border-sky-400 dashed w-full h-full rounded"></div>
           <a href="https://agristo.com/" target="_blank" class="absolute bg-white w-full h-full flex items-center justify-center transition hover:-translate-y-2 hover:translate-x-2 hover:rotate-2 border hover:shadow-xl rounded">
             <img src="/assets/agristo-N44zQw0L.gif" alt="Sponsor" class="h-full w-auto object-contain p-4">
           </a>
         </div>
 
-        <div class="col-span-2 sm:col-span-1 flex items-center justify-center h-40 bg-white relative">
+        <div class="col-span-2 sm:col-span-1 flex items-center justify-center h-40 relative">
           <div class="absolute border border-dashed border-sky-400 dashed w-full h-full rounded"></div>
           <a href="https://www.huismaria.be/" target="_blank" class="absolute bg-white w-full h-full flex items-center justify-center transition hover:-translate-y-2 hover:translate-x-2 hover:rotate-2 border hover:shadow-xl rounded">
             <img src="/assets/huis-maria-Yk922gxT.jpeg" alt="Sponsor" class="h-full w-auto object-contain p-4">
           </a>
         </div>
 
-        <div class="col-span-2 sm:col-span-1 flex items-center justify-center h-40 bg-white relative">
+        <div class="col-span-2 sm:col-span-1 flex items-center justify-center h-40 relative">
           <div class="absolute border border-dashed border-sky-400 dashed w-full h-full rounded"></div>
           <a href="https://www.lago.be/kortrijk-weide" target="_blank" class="absolute bg-white w-full h-full flex items-center justify-center transition hover:-translate-y-2 hover:translate-x-2 hover:rotate-2 border hover:shadow-xl rounded">
             <img src="/assets/lago-C_EzWgUh.jpeg" alt="Sponsor" class="h-full w-auto object-contain p-4">
           </a>
         </div>
 
-        <div class="col-span-4 sm:col-span-3 flex items-center justify-center h-40 bg-white relative">
+        <div class="col-span-4 sm:col-span-3 flex items-center justify-center h-40 relative">
           <div class="absolute border border-dashed border-sky-400 dashed w-full h-full rounded"></div>
           <a href="https://www.chocolatierdumon.be/" target="_blank" class="absolute bg-[#42302a] w-full h-full flex items-center justify-center transition hover:-translate-y-2 hover:translate-x-2 hover:rotate-2 border hover:shadow-xl rounded">
             <img src="/assets/dumon-MzVRAcb2.jpg" alt="Sponsor" class="h-full w-auto object-contain px-4 py-6">
           </a>
         </div>
 
-        <div class="col-span-4 sm:col-span-2 flex items-center justify-center h-32 sm:h-40 bg-white relative">
+        <div class="col-span-4 sm:col-span-2 flex items-center justify-center h-32 sm:h-40 relative">
           <div class="absolute border border-dashed border-sky-400 dashed w-full h-full rounded"></div>
           <a href="http://www.apotheek-arie.be/" target="_blank" class="absolute bg-white w-full h-full flex items-center justify-center transition hover:-translate-y-2 hover:translate-x-2 hover:rotate-2 border hover:shadow-xl rounded">
             <img src="/assets/apotheek-arie-CQEvf_rx.png" alt="Sponsor" class="h-full w-auto object-contain px-4 py-6">
           </a>
         </div>
 
-        <div class="col-span-2 sm:col-span-1 flex items-center justify-center h-40 bg-white relative">
+        <div class="col-span-2 sm:col-span-1 flex items-center justify-center h-40 relative">
           <div class="absolute border border-dashed border-sky-400 dashed w-full h-full rounded"></div>
           <a href="http://meatandmore.be/" target="_blank" class="absolute bg-white w-full h-full flex items-center justify-center transition hover:-translate-y-2 hover:translate-x-2 hover:rotate-2 border hover:shadow-xl rounded">
             <img src="/assets/bonap-B1JTXeub.png" alt="Sponsor" class="h-full w-auto object-contain p-4">
@@ -356,10 +502,10 @@
     </div>
   </section>
 
-  <footer class="text-slate-700 py-4 mt-16 border-t" style="background-color: #fff;">
+  <footer class="text-slate-700 py-4 border-t" style="background-color: #fff;">
     <div class="max-w-4xl mx-auto p-2">
       <p class="text-center">© 2025 Help Pascal</p>
-      <p class="text-center text-xs">Made by <a href="https://joachimdefour.com" target="_blank" class="text-darkGreen">Joachim Defour</a></p>
+      <p class="text-center text-sm">Made by <a href="https://joachimdefour.com" target="_blank" class="text-darkGreen font-semibold">Joachim Defour</a></p>
     </div>
   </footer>
 
