@@ -10,6 +10,7 @@ module.exports = {
         "rubik": ['Rubik', 'sans-serif']
       },
       colors: {
+        beige: '#D0BCA3',
         lightBeige: '#F3EBD7',
         darkBeige: '#D6C1A7',
         darkGray: '#6C7A79',
@@ -26,10 +27,16 @@ module.exports = {
           'from': { transform: 'translateX(-50%)' },
           'to': { transform: 'translateX(0%)' },
         },
+        subtleMove: {
+          "0%": { transform: "translate(0, 0)" },
+          "50%": { transform: "translate(5px, -5px)" },
+          "100%": { transform: "translate(0, 0)" },
+        },
       },
       animation: {
         scrollRight: 'scrollRight 30s linear infinite',
         scrollLeft: 'scrollLeft 30s linear infinite',
+        subtleMove: "subtleMove 3s infinite ease-in-out alternate",
       },
     },
   },

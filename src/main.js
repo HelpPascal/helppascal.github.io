@@ -18,14 +18,17 @@ window.addEventListener('load', () => {
   animateCounter();
 
   const navbar = document.getElementById("navbar");
+  const logo = document.getElementById("logo");
 
   window.addEventListener("scroll", function () {
       if (window.scrollY > 50) {
-          navbar.classList.add("bg-white/80", "backdrop-blur", "shadow", "border-b", "border-white/20");
+          navbar.classList.add("bg-white/80", "backdrop-blur", "shadow", "border-b", "border-white/20", "text-slate-700");
           navbar.classList.remove("text-white");
+          logo.classList.remove("hidden");
       } else {
-          navbar.classList.remove("bg-white/80", "backdrop-blur", "shadow", "border-b", "border-white/20");
+          navbar.classList.remove("bg-white/80", "backdrop-blur", "shadow", "border-b", "border-white/20", "text-slate-700");
           navbar.classList.add("text-white");
+          logo.classList.add("hidden");
       }
   });
 });
